@@ -2,13 +2,14 @@
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        Driver originalDriver = new Driver("John Doe", "Toyota Prius");
-        System.out.println("Original Driver: " + originalDriver.getName());
-        System.out.println("Original Driver’s car: " + originalDriver.getCarModel());
+        Driver driver = new Driver.DriverBuilder()
+                .withName("Johny Silverhand")
+                .withCarModel("Porshe 911")
+                .withLicenseNumber("XYZ12345")
+                .withExperienceYears(5)
+                .isAvailable(true)
+                .build();
 
-        Driver clonedDriver = originalDriver.clone();
-        clonedDriver.setName("Jane Doe");
-        System.out.println("Cloned Driver: " + clonedDriver.getName());
-        System.out.println("Cloned Driver’s car: " + clonedDriver.getCarModel());
+        System.out.println(driver);
     }
 }
