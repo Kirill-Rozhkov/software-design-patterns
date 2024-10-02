@@ -11,7 +11,6 @@ public class DriverManager {
         }
         return instance;
     }
-    // Допишите код
     public String findNearestDriver(String location) {
         System.out.println("Nearest driver found: " + "Driver1");
         return "Driver1";
