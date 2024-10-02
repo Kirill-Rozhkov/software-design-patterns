@@ -2,14 +2,12 @@
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        Driver driver = new Driver.DriverBuilder()
-                .withName("Johny Silverhand")
-                .withCarModel("Porshe 911")
-                .withLicenseNumber("XYZ12345")
-                .withExperienceYears(5)
-                .isAvailable(true)
-                .build();
+        Factory factory = new StandardTaxiFactory();
+        Taxi taxi = factory.createTaxi("Daniele", "XYZ12345");
+        taxi.takePassenger("John");
 
-        System.out.println(driver);
+        factory = new PremiumTaxiFactory();
+        taxi = factory.createTaxi("Daniele", "XYZ12345");
+        taxi.takePassenger("Jon");
     }
 }
