@@ -1,9 +1,9 @@
 public abstract class Taxi {
-    private String driverName;
+    private Driver driver;
     private String license;
 
-    public Taxi(String driverName, String license) {
-        this.driverName = driverName;
+    public Taxi(Driver driver, String license) {
+        this.driver = driver;
         this.license = license;
     }
 

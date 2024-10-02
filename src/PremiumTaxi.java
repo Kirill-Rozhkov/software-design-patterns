@@ -1,6 +1,6 @@
 public class PremiumTaxi extends Taxi {
-    public PremiumTaxi(String driverName, String license) {
-        super(driverName, license);
+    public PremiumTaxi(Driver driver, String license) {
+        super(driver, license);
     }
 
     @Override
